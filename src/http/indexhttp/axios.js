@@ -3,7 +3,7 @@ import config from './config'
 
 const indexAxios = axios.create({
   baseURL:config.host,
-  timeout:config.timeout
+  timeout:config.timeout||5000
 })
 
 indexAxios.interceptors.request.use((config)=>{
@@ -12,7 +12,7 @@ indexAxios.interceptors.request.use((config)=>{
 
 indexAxios.interceptors.response.use(
   (res)=>{
-    return response.data
+    return res.data
   },
   (error)=>{
     return Promise.reject(error)

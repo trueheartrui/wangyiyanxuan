@@ -15,6 +15,13 @@ module.exports = {
   lintOnSave:false,
   devServer:{
     open: true,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:4001',
+        changeOrigin: true,
+        pathRewrite: {'^/api' : ''}
+      }
+    }
   },
   css: {
     loaderOptions: {
@@ -23,6 +30,14 @@ module.exports = {
           postcss
         ]
       }
+    }
+  },
+  configureWebpack:{
+    resolve: {
+        alias: {
+            'components': resolve('src/components'),
+            'pages': resolve('src/pages'),
+        }
     }
   }
 }
