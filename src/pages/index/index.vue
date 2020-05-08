@@ -34,13 +34,10 @@
         <div v-if="showAllNav" class="mask"></div>
       </div>
     </div>
-
-
-    
-        
       
     <div class="scrollWraper" ref="scrollWraper">
       <div class="scrollContent">
+
         <!-- 轮播图 -->
           <div class="swiper-container">
             <div class="swiper-wrapper">
@@ -172,12 +169,216 @@
             </div>
             <!-- 人气推荐 -->
             <div class="popularItemModule">
-              <div class="title"></div>
-              <div class="spItem"></div>
-              <div class="list"></div>
+              <div class="title">
+                <div class="left">人气推荐</div>
+                <a href="javascript:;" class="right">更多<span class="iconfont icon-youjiantou"></span></a>
+              </div>
+              <div class="content">
+                <a href="javascript:;" class="spItem">
+                  <div class="spItemLeft">
+                    <img src="" alt="">
+                  </div>
+                  <div class="spItemRight">
+                    <div class="spItemTitle"><span class="text">母亲节特惠</span></div>
+                    <div class="spItemDesc">15分钟快速救脸15分钟快速救脸15分钟快速救脸</div>
+                    <div class="text">15分钟快速救脸</div>
+                    <div class="price">￥759</div>
+                  </div>
+                </a>
+                <div class="popularItem">
+                  <img class="itemImg" src="" alt="">
+                  <span class="itemDesc">每一口都有七种鱼，全价猫粮...</span>
+                  <span class="itemPrice">￥88</span>
+                  <span class="itemText"><span class="textWrap">热购</span></span>
+                </div>
+                <div class="popularItem">
+                  <img class="itemImg" src="" alt="">
+                  <span class="itemDesc">每一口都有七种鱼，全价猫粮...</span>
+                  <span class="itemPrice">￥88</span>
+                  <span class="itemText"><span class="textWrap">热购</span></span>
+                </div>
+                <div class="popularItem">
+                  <img class="itemImg" src="" alt="">
+                  <span class="itemDesc">每一口都有七种鱼，全价猫粮...</span>
+                  <span class="itemPrice">￥88</span>
+                  <span class="itemText"><span class="textWrap">热购</span></span>
+                </div>
+              </div>
+            </div>
+            <!-- 限时购 -->
+            <div class="flashSaleModule">
+              <div class="title">
+                <div class="left">人气推荐</div>
+                <a href="javascript:;" class="right">更多<span class="iconfont icon-youjiantou"></span></a>
+              </div>
+              <div class="content">
+                <div class="flashItem">
+                  <img class="itemImg" src="" alt="">
+                  <div>
+                    <span class="nowPrice">￥145</span>
+                    <span class="oldPrice">￥520</span>
+                  </div>
+                </div>
+                <div class="flashItem">
+                  <img class="itemImg" src="" alt="">
+                  <div>
+                    <span class="nowPrice">￥145</span>
+                    <span class="oldPrice">￥520</span>
+                  </div>
+                </div>
+                <div class="flashItem">
+                  <img class="itemImg" src="" alt="">
+                  <div>
+                    <span class="nowPrice">￥145</span>
+                    <span class="oldPrice">￥520</span>
+                  </div>
+                </div>
+                <div class="flashItem">
+                  <img class="itemImg" src="" alt="">
+                  <div>
+                    <span class="nowPrice">￥145</span>
+                    <span class="oldPrice">￥520</span>
+                  </div>
+                </div>
+                <div class="flashItem">
+                  <img class="itemImg" src="" alt="">
+                  <div>
+                    <span class="nowPrice">￥145</span>
+                    <span class="oldPrice">￥520</span>
+                  </div>
+                </div>
+                <div class="flashItem">
+                  <img class="itemImg" src="" alt="">
+                  <div>
+                    <span class="nowPrice">￥145</span>
+                    <span class="oldPrice">￥520</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 新品首发 -->
+            <div class="newItemModule">
+              <div class="title">
+                <div class="left">人气推荐</div>
+                <a href="javascript:;" class="right">更多<span class="iconfont icon-youjiantou"></span></a>
+              </div>
+              <div class="content">
+                <div class="newItem">
+                  <img class="itemImg" src="" alt="">
+                  <span class="itemDesc">每一口都有七种鱼，全价猫粮...</span>
+                  <span class="itemPrice">￥88</span>
+                  <span class="itemText"><span class="textWrap">热购</span></span>
+                </div>
+                <div class="newItem">
+                  <img class="itemImg" src="" alt="">
+                  <span class="itemDesc">每一口都有七种鱼，全价猫粮...</span>
+                  <span class="itemPrice">￥88</span>
+                  <span class="itemText"><span class="textWrap">热购</span></span>
+                </div>
+                <div class="newItem">
+                  <img class="itemImg" src="" alt="">
+                  <span class="itemDesc">每一口都有七种鱼，全价猫粮...</span>
+                  <span class="itemPrice">￥88</span>
+                  <span class="itemText"><span class="textWrap">热购</span></span>
+                </div>
+                <div class="newItem">
+                  <img class="itemImg" src="" alt="">
+                  <span class="itemDesc">每一口都有七种鱼，全价猫粮...</span>
+                  <span class="itemPrice">￥88</span>
+                  <span class="itemText"><span class="textWrap">热购</span></span>
+                </div>
+                <div class="newItem">
+                  <img class="itemImg" src="" alt="">
+                  <span class="itemDesc">每一口都有七种鱼，全价猫粮...</span>
+                  <span class="itemPrice">￥88</span>
+                  <span class="itemText"><span class="textWrap">热购</span></span>
+                </div>
+                <div class="newItem">
+                  <img class="itemImg" src="" alt="">
+                  <span class="itemDesc">每一口都有七种鱼，全价猫粮...</span>
+                  <span class="itemPrice">￥88</span>
+                  <span class="itemText"><span class="textWrap">热购</span></span>
+                </div>
+              </div>
+            </div>
+            <!-- 购物导航模块 -->
+            <div class="sceneLightShoppingGuideModule">
+              <div class="content">
+                <div class="shopingModule">
+                  <div class="title">严选超市</div>
+                  <div class="desc">10元凑好物</div>
+                  <div class="img">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                  </div>
+                </div>
+                <div class="shopingModule">
+                  <div class="title">严选超市</div>
+                  <div class="desc">10元凑好物</div>
+                  <div class="img">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                  </div>
+                </div>
+                <div class="shopingModule">
+                  <div class="title">严选超市</div>
+                  <div class="desc">10元凑好物</div>
+                  <div class="img">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                  </div>
+                </div>
+                <div class="shopingModule">
+                  <div class="title">严选超市</div>
+                  <div class="desc">10元凑好物</div>
+                  <div class="img">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <!-- 底部声明 -->
+            <div class="ftWrap">
+              <div class="device">
+                <a class="app" href="javascript:;">下载APP</a>
+                <a class="pc" href="javascript:;">电脑版</a>
+              </div>
+              <div class="copyright">
+                <p>网易公司版权所有 © 1997-<br/>食品经营许可证：JY13301080111719</p>
+              </div>
             </div>
           </div>
+
       </div>
+    </div>
+
+  <!-- 底部导航 -->
+    <div class="footerNav">
+      <div class="footerItem">
+        <div class="iconfont icon-shouye active"></div>
+        <span class="active">首页</span>
+      </div>
+      <div class="footerItem">
+        <div class="iconfont icon-fenlei2"></div>
+        <span>分类</span>
+      </div>
+      <div class="footerItem">
+        <div class="iconfont icon-mai"></div>
+        <span>值得买</span>
+      </div>
+      <div class="footerItem">
+        <div class="iconfont icon-gouwuche1"></div>
+        <span>购物车</span>
+      </div>
+      <div class="footerItem">
+        <div class="iconfont icon-geren"></div>
+        <span>个人</span>
+      </div>
+      
+      
+      
     </div>
   </div>
 </template>
@@ -346,10 +547,10 @@
       .mask
         position absolute
         left 0
-        top 0
+        top 4px
         right 0
         bottom 0
-        height calc(100vh - 56px)
+        height calc(100vh - 51px)
         background rgba(0,0,0,.5)
         z-index 1
   .scrollWraper
@@ -529,11 +730,187 @@
               background pink
       .popularItemModule
         module()
-      //   .title
-      //   .spItem
-      //   .list   
-
-
+        .title
+            title()
+            display flex
+            justify-content space-between
+            .right
+              display block
+              font-size 28px
+              color #333
+              .iconfont
+                font-size 28px
+        .content
+          content()
+          .spItem
+            display flex
+            height 280px
+            background-color #FEF0DF
+            margin-bottom 20px
+            .spItemTitle
+              display flex
+            .spItemLeft
+              img 
+                display block
+                width 280px
+                height 280px
+                background-color #eee
+            .spItemRight
+                width 350px
+                height 162px
+                line-height 1.5
+                margin auto 30px
+                background-color #eee
+                .spItemTitle
+                  .text
+                    display inline-block
+                    padding 2px 8px
+                    background rgba(255,255,255,.9)
+                    border-radius 15px
+                    border 1px solid #DD1A21
+                    font-size 18px
+                    color #DD1A21
+                .spItemDesc
+                  font-size 28px
+                  color #333
+                  white-space nowrap
+                  text-overflow ellipsis
+                  overflow hidden
+                .text
+                  font-size 24px
+                  color #7F7F7F
+                .price
+                  font-size 28px
+                  color #DD1A21
+          .popularItem
+            shopItem()
+      .flashSaleModule
+        module()
+        .title
+          title()
+          display flex
+          justify-content space-between
+          .right
+            display block
+            font-size 28px
+            color #333
+            .iconfont
+              font-size 28px
+        .content
+          content()
+          .flashItem
+            display flex
+            flex-direction column
+            .itemImg
+              width 216px
+              height 216px
+              margin-bottom 12px
+              background #eee
+            div
+              padding-left 20px
+              line-height 1.5
+              .nowPrice
+                font-size 28px
+                color #DD1A21
+                margin-right 12px
+              .oldPrice
+                font-size 24px
+                color #7F7F7F
+                text-decoration line-through
+      .newItemModule
+        module()
+        .title
+          title()
+          display flex
+          justify-content space-between
+          .right
+            display block
+            font-size 28px
+            color #333
+            .iconfont
+              font-size 28px
+        .content
+          content()
+        .newItem
+          shopItem()
+      .sceneLightShoppingGuideModule
+        module()
+        .content
+          content()
+          .shopingModule
+            width 319px
+            height 244px
+            padding 20px 0 0 20px
+            margin 4px 0 0 4px
+            line-height 1.5
+            .title
+              font-size 32px
+              color rgb(51, 51, 51)
+              padding-left 10px
+            .desc
+              font-size 24px
+              color rgb(127, 127, 127)
+              padding-left 10px
+            .img
+              display flex
+              img
+                width 150px
+                height 150px
+                margin-right 4px
+                background #eee  
+      .ftWrap
+        height  244px
+        padding 54px 20px 28px 20px
+        box-sizing border-box
+        background-color #414141
+        .device
+          height 62px
+          margin-bottom 36px
+          text-align center
+          .app
+            display inline-block
+            width 172px
+            height 60px
+            border 1px solid #999
+            margin-right 50px
+            font-size 24px
+            color #fff
+            line-height 60px
+          .pc
+            display inline-block
+            width 172px
+            height 60px
+            border 1px solid #999
+            font-size 24px
+            color #fff
+            line-height 60px
+        .copyright
+          text-align center
+          font-size 24px
+          line-height 32px
+          color #999
+  .footerNav
+    display flex
+    height 98px
+    .footerItem
+      width 20%
+      height 98px
+      display flex
+      flex-direction column
+      justify-content center
+      text-align center
+      .iconfont
+        font-size 45px
+        color #666
+        margin-bottom 7px
+        &.active
+          color #DD1A21
+      span
+        font-size 24px
+        color #666
+        &.active
+          color #DD1A21
+     
 
 
 
@@ -546,6 +923,7 @@
 
       
 
+  
   
   
   

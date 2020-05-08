@@ -12,3 +12,36 @@ content()
   display flex
   justify-content space-between
   flex-wrap wrap
+shopItem()
+  width 216px
+  display flex
+  flex-direction column
+  vertical-align top
+  margin-bottom 13px
+  .itemImg
+    width 216px
+    height 216px
+    background-color #eee
+    margin-bottom 12px
+  .itemDesc
+    font-size 24px
+    line-height 36px
+    overflow hidden
+    text-overflow ellipsis
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    word-break: break-all
+  .itemPrice
+    font-size 32px
+    color #DD1A21
+    line-height 48px
+  .itemText
+    .textWrap
+      display inline-block
+      padding 2px 8px
+      background rgba(255,255,255,.9)
+      border-radius 15px
+      border 1px solid #DD1A21
+      font-size 18px
+      color #DD1A21
