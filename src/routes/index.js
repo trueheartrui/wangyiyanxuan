@@ -18,5 +18,5 @@ export default [
   { path: '/category', component: Category },
   { path: '/deserve', component: Deserve },
   { path: '/personal', component: Personal },
-  { path: '/', redirect: '/index' }
+  { path: '/', redirect: '/deserve' }
 ]

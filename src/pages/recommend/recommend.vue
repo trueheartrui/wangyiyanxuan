@@ -209,7 +209,7 @@
       this.$nextTick(()=>{
         //内容滑屏
         let contentWrapper = this.$refs.scrollWraper
-        contentWrapper && new BSscroll(contentWrapper,{scrollY:true,click:true})
+        contentWrapper && new BSscroll(contentWrapper,{scrollY:true,click:true,bounce:false})
         //轮播图
         let mySwiper = new Swiper('.swiper-container',{
           loop: true, // 循环模式选项

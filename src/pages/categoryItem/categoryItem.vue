@@ -1,15 +1,15 @@
 <template>
 
 <div class="scrollWraper" ref="scrollWraper">
-  <div class="scrollContent">
+  <div class="scrollContent" v-if="cateObj">
+    <!-- {{cateObj}} -->
 
-
-    <div class="cateListContainer" v-if="cateData.length>0">
+    <div class="cateListContainer">
       <div class="swiper-container">
         <div class="swiper-wrapper">
           <div
             class="swiper-slide" 
-            v-for="(item,index) in cateData[0].category.bannerUrlList"
+            v-for="(item,index) in cateObj.category.bannerUrlList"
             :key="index"
           >
             <img class="swiperItem_img" :src="item">
@@ -17,14 +17,14 @@
         </div>
       </div>
 		
-      <span class="title">{{cateData[0].category.name}}</span>
-      <span class="desc">{{cateData[0].category.frontName}}</span>
+      <span class="title">{{cateObj.category.name}}</span>
+      <span class="desc">{{cateObj.category.frontName}}</span>
       <!-- <ShopList :cateObj="cateObj"></ShopList> -->
 
       <div class="shopList">
         <div 
           class="item" 
-          v-for="(item,index) in cateData[0].itemList" 
+          v-for="(item,index) in cateObj.itemList" 
           :key="index"
           @click="toDetail(item)"
         >
@@ -63,28 +63,36 @@
       this.$nextTick(()=>{
         //内容滑屏
         let contentWrapper = this.$refs.scrollWraper
-        contentWrapper && new BSscroll(contentWrapper,{scrollY:true,click:true})
+        contentWrapper && new BSscroll(contentWrapper,{scrollY:true,click:true,bounce:false})
         //轮播图
         let mySwiper = new Swiper('.swiper-container',{
           loop: true, // 循环模式选项
           autoplay:true,
         })
       })
-      //保存传过来的
-      console.log(this.id)
     },
     computed:{
       cateObj(){
         console.log('computed')
-        console.log(this.cateData.find((item)=>{item.category.parentId === this.id}))
-        return this.cateData.find((item)=>{item.category.parentId === this.id})
+        let result = this.cateData.find((item)=>item.category.parentId === this.id*1)
+        return result
       }
     },
     // watch:{
-    //   $router:()=>{
-
+    //   '$route'(){
+    //     console.log(this.cateObj,'-------')
     //   }
-    // }
+    // },
+      // 组件内的守卫
+    // beforeRouteUpdate (to, from, next) {
+    //   // 在当前路由改变，但是该组件被复用时调用
+    //   // 举例来说，对于一个带有动态参数的路径 /foo/:id，在 /foo/1 和 /foo/2 之间跳转的时候，
+    //   // 由于会渲染同样的 Foo 组件，因此组件实例会被复用。而这个钩子就会在这个情况下被调用。
+    //   // 可以访问组件实例 `this`
+    //   //提前是hash模式
+    //   console.log(to.params.id,"组件内的守卫-beforeRouteUpdate")
+    //   next()
+    // },
   }
 </script>
 
