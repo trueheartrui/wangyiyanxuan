@@ -1,5 +1,9 @@
 <template>
   
+<div class="scrollWraper" ref="scrollWraper">
+  <div class="scrollContent">
+
+
     <div>
       <!-- 轮播图 -->
         <div class="swiper-container">
@@ -179,6 +183,9 @@
           </div>
         </div>
 
+
+    </div>
+  </div>
     </div>
     
 </template>
@@ -186,6 +193,7 @@
 <script>
   import {mapState,mapActions} from 'vuex'
   import {CHANGEINDEXDATA} from '../../store/mutation_types'
+  import BSscroll from 'better-scroll'
   import Swiper from 'swiper'
   import 'swiper/css/swiper.css'
   export default {
@@ -199,6 +207,9 @@
       // 获取首页数据
       await this[CHANGEINDEXDATA]()
       this.$nextTick(()=>{
+        //内容滑屏
+        let contentWrapper = this.$refs.scrollWraper
+        contentWrapper && new BSscroll(contentWrapper,{scrollY:true,click:true})
         //轮播图
         let mySwiper = new Swiper('.swiper-container',{
           loop: true, // 循环模式选项
