@@ -7,6 +7,16 @@ export default{
       url:'/getIndexData',
       method:'get',
       corsUrl:'api'
+    },
+    getCategoryDatas:{
+      url:'/getCategoryDatas',
+      method:'get',
+      corsUrl:'api'
+    },
+    getCateList:{
+      url:'/getIndexCateList',
+      method:'get',
+      corsUrl:'api'
     }
   }
 }
