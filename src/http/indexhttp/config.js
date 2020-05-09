@@ -17,6 +17,11 @@ export default{
       url:'/getIndexCateList',
       method:'get',
       corsUrl:'api'
+    },
+    getCateContent:{
+      url:'/getCateLists',
+      method:'get',
+      corsUrl:'api'
     }
   }
 }

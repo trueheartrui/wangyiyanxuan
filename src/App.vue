@@ -2,7 +2,7 @@
   <div>
     <router-view></router-view>
     <!-- 底部导航 -->
-    <div class="footerNav">
+    <div class="footerNav" v-if="$route.meta.requiresNav">
       <router-link class="footerItem"  to="/index">
         <div class="iconfont icon-shouye active"></div>
         <span class="active">首页</span>

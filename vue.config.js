@@ -20,6 +20,11 @@ module.exports = {
         target: 'http://localhost:4001',
         changeOrigin: true,
         pathRewrite: {'^/api' : ''}
+      },
+      '/initSearch': {
+        target: 'https://m.you.163.com',
+        changeOrigin: true,
+        pathRewrite: {'^/initSearch' : ''}
       }
     }
   },

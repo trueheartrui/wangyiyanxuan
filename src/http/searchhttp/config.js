@@ -1,0 +1,22 @@
+export default{
+  timeout:60000,
+  name:'index',
+  api:{
+    getKeywords:{
+      url:'/xhr/search/init.json',
+      method:'get',
+      corsUrl:'initSearch'
+    },
+    getSearchAuto:{
+      url:'/xhr/search/searchAutoComplete.json',
+      method:'post',
+      corsUrl:'initSearch',
+      isForm:true
+    },
+    getDeserveNav:{
+      url:'/topic/v1/know/navWap.json',
+      method:'get',
+      corsUrl:'initSearch',
+    }
+  }
+}

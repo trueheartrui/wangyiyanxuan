@@ -2,7 +2,7 @@
   <div class="cateGorysListContainer">
 		<!-- 头部 -->
 		<div class="header">
-			<div class="search">搜索商品</div>
+			<router-link to="/search" class="search">搜索商品</router-link>
 		</div>
 		<!-- 内容 -->
 		<div class="contentContainer">
@@ -17,13 +17,29 @@
 					>{{item.name}}</div>
         </div>
 			</div>
-			<div class="rightContainer" ref="rightContainer" v-if="CategoryData.length>0"> 
+			<div class="rightContainer" ref="rightContainer" v-if="cateContent.length>0"> 
 				<div class="rightContent">
-            <img class="rightImg" :src="cateObj.imgUrl">
-						<div class="rightItem" v-for="(item) in cateObj.subCateList" :key="item.id">
-							<img :src="item.wapBannerUrl" >
-							<div class="text">{{item.name}}</div>
-						</div>
+            <img class="rightImg" src="https://yanxuan.nosdn.127.net/a41ddf5b8d7921d5d09987022dd71cac.jpg?quality=75&type=webp&imageView&thumbnail=0x196">
+						
+            <div class="rightItemWrapper"  v-if="cateObj.categoryList">
+              <div class="rightItem" v-for="(item) in cateObj.categoryList" :key="item.id">
+                <img :src="item.wapBannerUrl" >
+                <div class="text">{{item.name}}</div>
+              </div>
+            </div>
+            
+
+            <div class="rightItemWrapper"  v-else>
+              <div  class="rightItem" v-for="(item) in cateObj.subCateList" :key="item.id">
+                <img :src="item.wapBannerUrl" >
+                <div class="text">{{item.name}}</div>
+              </div>
+            </div>
+
+
+            
+            
+            
 					</div>
 			</div>
 		</div>
@@ -37,24 +53,24 @@
     data:()=>{
       return{
         CategoryData:[],
+        cateContent:[],
         clickId:0
       }
     },
     async mounted(){
+      // 获取左侧导航数据
       let result = await http.index.getCategoryDatas()
-      this.CategoryData = result.data
+      this.CategoryData = result.data.categoryL1List
       this.clickId = this.CategoryData[0].id
+      //获取右侧内容数据
+      let content = await http.index.getCateContent()
+      this.cateContent = content.data
       //右侧滑屏
       this.$nextTick(() => {
         // DOM 现在更新了
         let rightWraper = this.$refs.rightContainer
-        console.log(rightWraper)
         rightWraper && new BSscroll(rightWraper,{scrollY:true,click:true})
       })
-        
-      
-      
-      
     },
     methods:{
       changeClickId(id){
@@ -63,10 +79,10 @@
     },
     computed:{
 			cateObj(){
-        console.log(this.CategoryData.find( item=>{
+        console.log(this.cateContent.find( item=>{
 					return item.id === this.clickId
 				}))
-				return this.CategoryData.find( item=>{
+				return this.cateContent.find( item=>{
 					return item.id === this.clickId
 				})
 			}
@@ -80,6 +96,7 @@
       height 56px
       padding 10px 0
       .search
+        display block
         width 90%
         height 100%
         margin 0 auto
@@ -97,7 +114,7 @@
         .leftContainer
           width 20%
           height 100%
-          overflow hidden
+          overflow auto
           .leftContent
             border-right 1px solid #eee
             box-sizing border-box
@@ -120,7 +137,7 @@
         .rightContainer
           width 80%
           height 100%
-          overflow hidden
+          overflow auto
           .rightContent
             display flex
             flex-wrap wrap
@@ -128,17 +145,20 @@
               width 520px
               height 190px
               margin 20px auto
-            .rightItem
-              width 33.333%
-              height 216px
+            .rightItemWrapper
               display flex
-              flex-direction column
-              align-items center
-              img
-                width 144px
-                height 144px
-              .text
-                font-size 24px
+              flex-wrap wrap
+              .rightItem
+                width 33.333%
+                height 216px
+                display flex
+                flex-direction column
+                align-items center
+                img
+                  width 144px
+                  height 144px
+                .text
+                  font-size 24px
 
 
 
